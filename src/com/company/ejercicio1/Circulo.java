@@ -32,7 +32,7 @@ public class Circulo {
         return color;
     }
 
-    public double getAreaCirculo(){
+    public double getArea(){
         double area;
         area=Math.PI * Math.pow(radio, 2);
         return area;
@@ -41,13 +41,14 @@ public class Circulo {
     public void imprimirCirculo(){
         System.out.println("Radio: "+ this.getRadio());
         System.out.println("Color: "+ this.getColor());
-        System.out.println("Area: "+ getAreaCirculo());
+        System.out.println("Area: "+ getArea());
     }
 
     @Override
     public String toString() {
-        return ("Radio: " + this.getRadio()
+        return ("Circulo"
+                +"\nRadio: " + this.getRadio()
                 +"\nColor: " + this.getColor()
-                + "\nArea: " + getAreaCirculo());
+                + "\nArea Circular: " + getArea());
     }
 }

@@ -23,7 +23,7 @@ public class Cilindro extends Circulo{
 
     public double getVolumen(){
         double volumen;
-        volumen=super.getAreaCirculo()*altura;
+        volumen=super.getArea()*altura;
         return volumen;
     }
 
@@ -35,8 +35,14 @@ public class Cilindro extends Circulo{
 
     @Override
     public String toString() {
-        return (super.toString()+
-                "\nAltura: " + getAltura() +
-                "\nVolumen: " + getVolumen());
+        return ("\nSubclase de: " + super.toString()+
+                "\nAltura: " + getAltura());
+    }
+
+    @Override
+    public double getArea(){
+        double area;
+        area=(2*Math.PI*Math.pow(this.getRadio(),2))+(2*Math.PI*this.getRadio()*this.getAltura());
+        return area;
     }
 }
